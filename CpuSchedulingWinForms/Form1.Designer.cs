@@ -91,6 +91,7 @@
             this.btnPriority.Name = "btnPriority";
             this.btnPriority.Size = new System.Drawing.Size(68, 27);
             this.btnPriority.TabIndex = 4;
+            // this.btnPriority.Text = "PRIORITY";
             this.btnPriority.Text = "PRIORITY";
             this.btnPriority.UseVisualStyleBackColor = true;
             this.btnPriority.Click += new System.EventHandler(this.btnPriority_Click);
@@ -100,6 +101,7 @@
             this.btnSRTF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSRTF.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSRTF.Location = new System.Drawing.Point(250, 138);
+            //this.btnSRTF.Location = new System.Drawing.Point(250, 138);
             this.btnSRTF.Name = "btnSRTF";
             this.btnSRTF.Size = new System.Drawing.Size(65, 27);
             this.btnSRTF.TabIndex = 5;

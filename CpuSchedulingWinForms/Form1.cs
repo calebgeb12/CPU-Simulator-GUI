@@ -69,7 +69,7 @@ namespace CpuSchedulingWinForms
         {
             if (txtProcess.Text != "")
             {
-                Algorithms.hrrnAlgorithm(txtProcess.Text);
+                Algorithms.srtfAlgorithm(txtProcess.Text);
             } else
             {
                 MessageBox.Show("Enter number of processes", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -81,7 +81,7 @@ namespace CpuSchedulingWinForms
         {
             if (txtProcess.Text != "")
             {
-                Algorithms.srtfAlgorithm(txtProcess.Text);
+                Algorithms.hrrnAlgorithm(txtProcess.Text);
             } else
             {
                 MessageBox.Show("Enter number of processes", "", MessageBoxButtons.OK, MessageBoxIcon.Error);

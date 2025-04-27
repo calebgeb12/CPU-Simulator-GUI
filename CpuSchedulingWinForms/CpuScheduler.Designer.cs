@@ -53,6 +53,8 @@
             this.restartApp = new System.Windows.Forms.Label();
             this.btnPriority = new System.Windows.Forms.Button();
             this.btnSJF = new System.Windows.Forms.Button();
+            this.btnSRTF = new System.Windows.Forms.Button();
+            this.btnHRRN = new System.Windows.Forms.Button();
             this.btnFCFS = new System.Windows.Forms.Button();
             this.txtProcess = new System.Windows.Forms.TextBox();
             this.labelProcess = new System.Windows.Forms.Label();
@@ -318,6 +320,8 @@
             this.cpuSchedulerTab.Controls.Add(this.btnPriority);
             this.cpuSchedulerTab.Controls.Add(this.btnSJF);
             this.cpuSchedulerTab.Controls.Add(this.btnFCFS);
+            this.cpuSchedulerTab.Controls.Add(this.btnSRTF);
+            this.cpuSchedulerTab.Controls.Add(this.btnHRRN);
             this.cpuSchedulerTab.Controls.Add(this.txtProcess);
             this.cpuSchedulerTab.Controls.Add(this.labelProcess);
             this.cpuSchedulerTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -330,6 +334,21 @@
             // 
             // btnRoundRobin
             // 
+            this.btnRoundRobin.BackColor = System.Drawing.Color.PapayaWhip;
+            this.btnRoundRobin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRoundRobin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.btnRoundRobin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoundRobin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoundRobin.Image = ((System.Drawing.Image)(resources.GetObject("btnRoundRobin.Image")));
+            this.btnRoundRobin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRoundRobin.Name = "btnRoundRobin";
+            this.btnRoundRobin.TabIndex = 12;
+            this.btnRoundRobin.Text = "Round\r\nRobin";
+            this.btnRoundRobin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRoundRobin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRoundRobin.UseVisualStyleBackColor = false;
+            this.btnRoundRobin.Click += new System.EventHandler(this.btnRoundRobin_Click);
+
             this.btnRoundRobin.BackColor = System.Drawing.Color.PapayaWhip;
             this.btnRoundRobin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRoundRobin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
@@ -369,9 +388,7 @@
             this.btnPriority.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPriority.Image = ((System.Drawing.Image)(resources.GetObject("btnPriority.Image")));
             this.btnPriority.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPriority.Location = new System.Drawing.Point(347, 278);
             this.btnPriority.Name = "btnPriority";
-            this.btnPriority.Size = new System.Drawing.Size(107, 45);
             this.btnPriority.TabIndex = 10;
             this.btnPriority.Text = "PRIORITY";
             this.btnPriority.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -388,9 +405,7 @@
             this.btnSJF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSJF.Image = ((System.Drawing.Image)(resources.GetObject("btnSJF.Image")));
             this.btnSJF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSJF.Location = new System.Drawing.Point(115, 278);
             this.btnSJF.Name = "btnSJF";
-            this.btnSJF.Size = new System.Drawing.Size(117, 45);
             this.btnSJF.TabIndex = 9;
             this.btnSJF.Text = "SHORTEST JOB FIRST";
             this.btnSJF.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -407,15 +422,49 @@
             this.btnFCFS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFCFS.Image = ((System.Drawing.Image)(resources.GetObject("btnFCFS.Image")));
             this.btnFCFS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFCFS.Location = new System.Drawing.Point(16, 278);
             this.btnFCFS.Name = "btnFCFS";
-            this.btnFCFS.Size = new System.Drawing.Size(84, 45);
             this.btnFCFS.TabIndex = 8;
             this.btnFCFS.Text = "FCFS";
             this.btnFCFS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFCFS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFCFS.UseVisualStyleBackColor = false;
             this.btnFCFS.Click += new System.EventHandler(this.btnFCFS_Click);
+            // 
+            // btnSRTF
+            // 
+            this.btnSRTF.BackColor = System.Drawing.Color.MistyRose;
+            this.btnSRTF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSRTF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.btnSRTF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSRTF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSRTF.Image = ((System.Drawing.Image)(resources.GetObject("btnSRTF.Image")));
+            this.btnSRTF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSRTF.Name = "btnSRTF";
+            this.btnSRTF.TabIndex = 13;
+            this.btnSRTF.Text = "SRTF";
+            this.btnSRTF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSRTF.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSRTF.UseVisualStyleBackColor = false;
+            this.btnSRTF.Click += new System.EventHandler(this.btnSRTF_Click);
+
+            // 
+            // btnHRRN
+            // 
+            this.btnHRRN.BackColor = System.Drawing.Color.Moccasin;
+            this.btnHRRN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHRRN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.btnHRRN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHRRN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHRRN.Image = ((System.Drawing.Image)(resources.GetObject("btnHRRN.Image")));
+            this.btnHRRN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHRRN.Name = "btnHRRN";
+            this.btnHRRN.TabIndex = 14;
+            this.btnHRRN.Text = "HRRN";
+            this.btnHRRN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHRRN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHRRN.UseVisualStyleBackColor = false;
+            this.btnHRRN.Click += new System.EventHandler(this.btnHRRN_Click);
+
             // 
             // txtProcess
             // 
@@ -550,6 +599,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCodeOutput)).EndInit();
             this.ResumeLayout(false);
 
+            //alg button sizes and 
+            this.btnFCFS.Location = new System.Drawing.Point(10, 278);
+            this.btnFCFS.Size = new System.Drawing.Size(75, 45);
+
+            this.btnSJF.Location = new System.Drawing.Point(90, 278);
+            this.btnSJF.Size = new System.Drawing.Size(75, 45);
+
+            this.btnRoundRobin.Location = new System.Drawing.Point(170, 278);
+            this.btnRoundRobin.Size = new System.Drawing.Size(75, 45);
+
+            this.btnPriority.Location = new System.Drawing.Point(250, 278);
+            this.btnPriority.Size = new System.Drawing.Size(75, 45);
+
+            this.btnSRTF.Location = new System.Drawing.Point(330, 278);
+            this.btnSRTF.Size = new System.Drawing.Size(75, 45);
+
+            this.btnHRRN.Location = new System.Drawing.Point(410, 278);
+            this.btnHRRN.Size = new System.Drawing.Size(75, 45);
+
+            /** original dimensions
+                this.btnRoundRobin.Location = new System.Drawing.Point(247, 278);
+                this.btnRoundRobin.Size = new System.Drawing.Size(85, 45);
+
+                this.btnPriority.Location = new System.Drawing.Point(347, 278);
+                //this.btnPriority.Location = new System.Drawing.Point(1000, 1000);
+                this.btnPriority.Size = new System.Drawing.Size(107, 45);
+
+                this.btnSJF.Location = new System.Drawing.Point(115, 278);
+                this.btnSJF.Size = new System.Drawing.Size(117, 45);
+
+                this.btnFCFS.Location = new System.Drawing.Point(16, 278);
+                this.btnFCFS.Size = new System.Drawing.Size(84, 45);
+
+                this.btnSRTF.Location = new System.Drawing.Point(347, 278); // new row under SJF
+                this.btnSRTF.Size = new System.Drawing.Size(117, 45);
+
+                this.btnHRRN.Location = new System.Drawing.Point(247, 340); // new row under Round Robin
+                this.btnHRRN.Size = new System.Drawing.Size(107, 45);
+            **/
         }
 
         #endregion
@@ -569,6 +657,10 @@
         private System.Windows.Forms.Button btnPriority;
         private System.Windows.Forms.Button btnSJF;
         private System.Windows.Forms.Button btnFCFS;
+        private System.Windows.Forms.Button btnRoundRobin;
+        private System.Windows.Forms.Button btnSRTF;
+        private System.Windows.Forms.Button btnHRRN;
+
         public System.Windows.Forms.TextBox txtProcess;
         private System.Windows.Forms.Label labelProcess;
         private System.Windows.Forms.Button btnQrcode;
@@ -584,7 +676,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnRoundRobin;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Timer timer1;
     }
