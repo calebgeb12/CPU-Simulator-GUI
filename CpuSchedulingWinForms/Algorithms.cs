@@ -9,6 +9,25 @@ namespace CpuSchedulingWinForms
 {
     public static class Algorithms
     {
+
+        public static void hrrnAlgorithm(String userInput)
+        {
+            int np = Convert.ToInt16(userInput);
+
+
+            DialogResult result = MessageBox.Show("First Come First Serve Scheduling ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+
+        }
+
+        public static void srtfAlgorithm(String userInput) 
+        {
+            int np = Convert.ToInt16(userInput);
+
+            DialogResult result = MessageBox.Show("First Come First Serve Scheduling ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+        }
+
         public static void fcfsAlgorithm(string userInput)
         {
             int np = Convert.ToInt16(userInput);
