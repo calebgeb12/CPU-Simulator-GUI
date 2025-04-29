@@ -1,4 +1,4 @@
-1) This repo is a fork of the starter code repo, but an independent console-based solution is implemented
+1) This repo is a fork of the starter code repo, but an independent console-based solution is implemented. However, the two additional algorithms (SRTF and HRRN) are implemented in the GUI based starter code
 
 2) The solution is coded in Java, and it can be found by going to .testing/Testing.java
 
