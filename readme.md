@@ -1,12 +1,9 @@
-## CPU-Simulator GUI
-A grahical user interface application with these components: CPU Simulator, QR code and Barcode Generator.
+1) This repo is a fork of the starter code repo, but an independent console-based solution is implemented
 
+2) The solution is coded in Java, and it can be found by going to .testing/Testing.java
 
-## Usage
+3) This ./testing folder contains all of the scheduling algorithms in different classes. The Testing.java class uses these classes to test data.
 
-```
-Please install the font: "IDAutomationHC39M Free Version". You can find it in the project root folder.
-```
+4) Simply use your desired terminal environment to run this .testing class
 
-## License
-This project is licensed under the terms of the [MIT license](https://choosealicense.com/licenses/mit/).
+5) To use personalized test data, you can modify the data structures and variables in the main method

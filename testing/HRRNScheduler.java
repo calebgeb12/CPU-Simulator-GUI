@@ -45,6 +45,7 @@ public class HRRNScheduler {
             }
             if (idx == -1) { idle++; time++; continue; }
             if (start[idx] == -1) start[idx] = time;
+            
             // execute one tick of the chosen job
             for (int j = 0; j < n; j++)
                 if (j != idx && remaining[j] > 0 && arrivalTime[j] <= time) wait[j]++;
