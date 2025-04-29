@@ -88,7 +88,7 @@ namespace CpuSchedulingWinForms
                     for (int i = 0; i < np; i++)
                     {
                         double hitRatio = 1 + (waitTime[i] / burstTime[i]);
-                        if (arrivalTime[i] <= currTime && hitRatio <= maxRatio && remainingTime[i] > 0)
+                        if (arrivalTime[i] <= currTime && hitRatio > maxRatio && remainingTime[i] > 0)
                         {
                             if (startTime[i] == -1)
                             {
@@ -143,11 +143,11 @@ namespace CpuSchedulingWinForms
 
                 for (int i = 0; i < np; i++)
                 {
-                    totalTurnaroundTime += completionTime[i] - startTime[i];
+                    totalTurnaroundTime += completionTime[i] - arrivalTime[i];
                 }
 
-                double averageWaitTime = totalWaitTime / np;
-                double averageTurnaroundTime = totalTurnaroundTime / np;
+                double averageWaitTime = Math.Round(totalWaitTime / np, 2);
+                double averageTurnaroundTime = Math.Round(totalTurnaroundTime / (double) np, 2);
                 double cpuUtilizationRate = Math.Round(usedTime / (idleTime + usedTime), 2) * 100;
                 double throughput = Math.Round(((np) / (idleTime + usedTime)), 2);
 
@@ -164,8 +164,6 @@ namespace CpuSchedulingWinForms
                 //Form1 frm = new Form1();
                 //frm.ShowDialog();
             }
-
-
         }
 
         public static void srtfAlgorithm(string userInput) 
@@ -293,11 +291,11 @@ namespace CpuSchedulingWinForms
                 }
 
                 for (int i = 0; i < np; i++) {
-                    totalTurnaroundTime += completionTime[i] - startTime[i];
+                    totalTurnaroundTime += completionTime[i] - arrivalTime[i];
                 }
 
-                double averageWaitTime = totalWaitTime / np;
-                double averageTurnaroundTime = totalTurnaroundTime / np;
+                double averageWaitTime = Math.Round(totalWaitTime / np, 2);
+                double averageTurnaroundTime = Math.Round(totalTurnaroundTime / np, 2);
                 double cpuUtilizationRate = Math.Round(usedTime / (idleTime + usedTime), 2) * 100;
                 double throughput = Math.Round(((np) / (idleTime + usedTime)), 2);
 
